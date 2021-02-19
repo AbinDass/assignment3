@@ -1,16 +1,9 @@
-
-#l=[]
-#n=int(input("enter the number of elements:"))
-#for i in range(0,n):
-	#elements=input()
-	#l.append(elements)
-#print(l)
-
-
-l=[]
-n=input("enter the string:")
-l.append(n)
-for i in n:
-	if i not in "a,e,i,o,u,A,E,I,O,U":
-		print(i)
-print(l)
+str1=input("enter string: ")
+vow=['a','e','i','o','u','A','E','I','O','U']
+def vowremv(str2):
+	st=' '
+	vowremvd=[i for i in str2 if i not in vow]
+	for i in vowremvd:
+		st+=i
+	return st
+print(list(vowremv(str1)))
